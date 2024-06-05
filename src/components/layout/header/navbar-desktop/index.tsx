@@ -1,16 +1,16 @@
 "use client";
 
 import { MENU_LIST } from "@/lib/constant";
-import Link from "next/link";
 import React from "react";
+import MenuItem from "../menu-item";
 
 const NavbarDesktop: React.FC = () => {
   return (
     <nav className="flex gap-8">
       {MENU_LIST.map((menu, index) => (
-        <Link href={menu.path} key={`${index}__navbar__desktop`}>
-          {menu.name}
-        </Link>
+        <div key={`${index}__navbar__desktop`}>
+          <MenuItem menu={menu} />
+        </div>
       ))}
     </nav>
   );

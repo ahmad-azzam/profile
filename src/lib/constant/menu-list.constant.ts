@@ -1,6 +1,6 @@
-import { TMenuList } from "../types";
+import { TMenuItem } from "../types";
 
-const MENU_LIST: TMenuList[] = [
+const MENU_LIST: TMenuItem[] = [
   {
     name: "home",
     path: "/",
