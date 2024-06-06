@@ -1,4 +1,4 @@
-import { Photo, Social } from "@/components/section/home";
+import { Photo, Social, Stats } from "@/components/section/home";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { FiDownload } from "react-icons/fi";
@@ -43,6 +43,8 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <Stats />
     </section>
   );
 };
