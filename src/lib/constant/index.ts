@@ -6,3 +6,4 @@ export { default as ABOUT } from "./about.constant";
 export { default as EXPERIENCE } from "./experience.constant";
 export { default as EDUCATION } from "./education.constant";
 export { default as SKILL } from "./skill.constant";
+export { default as PROJECT_LIST } from "./project-list.constant";
