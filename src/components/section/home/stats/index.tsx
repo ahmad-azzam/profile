@@ -13,12 +13,14 @@ const Stats: React.FC = () => {
           {STAT_LIST.map((stat, index) => (
             <div
               key={`${index}__stats`}
-              className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
+              className="flex-1 flex gap-4 items-center xl:justify-start"
             >
               <CountUp
                 end={stat.num}
                 duration={5}
                 delay={2}
+                decimals={stat.num % 1 !== 0 ? 1 : 0}
+                separator=" "
                 className="text-4xl xl:text-6xl font-extrabold"
               />
               <p

@@ -1,22 +1,14 @@
 import { TSocialItem } from "../types";
-import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const SOCIAL_LIST: TSocialItem[] = [
   {
     icon: <FaGithub />,
-    url: "",
+    url: "https://github.com/ahmad-azzam",
   },
   {
     icon: <FaLinkedin />,
-    url: "",
-  },
-  {
-    icon: <FaYoutube />,
-    url: "",
-  },
-  {
-    icon: <FaTwitter />,
-    url: "",
+    url: "https://www.linkedin.com/in/ahmad-azzam-s/",
   },
 ];
 

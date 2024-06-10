@@ -16,6 +16,7 @@ const Social: React.FC<SocialProps> = ({ containerStyle, iconStyle }) => {
           key={`${index}__home__social`}
           href={social.url}
           className={cn("", iconStyle)}
+          target="_blank"
         >
           {social.icon}
         </Link>
