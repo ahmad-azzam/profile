@@ -21,7 +21,7 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[50vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
@@ -35,7 +35,7 @@ const Resume = () => {
             <TabsTrigger value={EResumeTab.ABOUT}>About Me</TabsTrigger>
           </TabsList>
 
-          <div className="min-h-[70vh] w-full">
+          <div className="w-full">
             <TabsContent value={EResumeTab.EXPERIENCE} className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{EXPERIENCE.title}</h3>
@@ -47,7 +47,7 @@ const Resume = () => {
                     {EXPERIENCE.info.map((experience, index) => (
                       <li
                         key={`${index}__resume__experience`}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#734046] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent">
                           {experience.duration}
@@ -76,7 +76,7 @@ const Resume = () => {
                     {EDUCATION.info.map((education, index) => (
                       <li
                         key={`${index}__resume__education`}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#734046] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent">
                           {education.duration}
@@ -96,7 +96,10 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent value={EResumeTab.SKILL} className="w-full h-full">
+            <TabsContent
+              value={EResumeTab.SKILL}
+              className="w-full h-full mb-4"
+            >
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{SKILL.title}</h3>
@@ -109,7 +112,7 @@ const Resume = () => {
                     <li key={`${index}__resume__skill`}>
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-lg flex justify-center items-center group">
+                          <TooltipTrigger className="w-full h-[150px] bg-[#734046] rounded-lg flex justify-center items-center group">
                             <div className="text-6xl group-hover:text-accent transition-all duration-300">
                               {skill.icon}
                             </div>

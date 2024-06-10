@@ -3,7 +3,7 @@ import { TEducationItem } from "../types";
 const EDUCATION: TEducationItem = {
   title: "My Education",
   description:
-    "lorem ipsum dolor sit amet, consectetur adip sapien sed diam nonumy eirmod tempor incididunt",
+    "Below is a detailed list of my education, outlining the academic qualifications and training I have completed.",
   icon: "",
   info: [
     {

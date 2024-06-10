@@ -5,7 +5,7 @@ import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
 const SKILL: TSkillItem = {
   title: "My Skill",
   description:
-    "lorem ipsum dolor sit amet, consectetur adip id el aspect et accus temp    ",
+    "Below is a comprehensive list of my skills, showcasing the diverse range of technical abilities and competencies I possess in web development.",
   info: [
     {
       icon: <FaHtml5 />,

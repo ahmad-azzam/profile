@@ -2,8 +2,7 @@ import { TAboutItem } from "../types";
 
 const ABOUT: TAboutItem = {
   title: "About me",
-  description:
-    "lorem ipsum dolor sit amet lore mauris in lorem et justo so simple",
+  description: "Below is my contact information for easy reference.",
   info: [
     {
       key: "Name",
