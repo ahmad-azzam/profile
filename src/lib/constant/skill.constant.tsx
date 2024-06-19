@@ -1,6 +1,14 @@
 import { TSkillItem } from "../types";
 import { FaHtml5, FaCss3, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiTypescript,
+  SiExpress,
+  SiPostgresql,
+  SiNestjs,
+  SiGraphql,
+} from "react-icons/si";
 
 const SKILL: TSkillItem = {
   title: "My Skill",
@@ -34,6 +42,22 @@ const SKILL: TSkillItem = {
     {
       icon: <SiNextdotjs />,
       name: "Next JS",
+    },
+    {
+      icon: <SiExpress />,
+      name: "Express JS",
+    },
+    {
+      icon: <SiNestjs />,
+      name: "Nest JS",
+    },
+    {
+      icon: <SiGraphql />,
+      name: "GraphQL",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
     },
   ],
 };

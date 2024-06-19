@@ -5,6 +5,6 @@ export type TProjectItem = {
   description: string;
   stack: { name: string }[];
   image: string;
-  live: "";
-  github: "";
+  live: string;
+  github: string;
 };

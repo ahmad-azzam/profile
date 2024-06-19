@@ -1,5 +1,6 @@
 import { TStatItem } from "../types";
 import { calculateYearsOfExperience } from "../utils";
+import PROJECT_LIST from "./project-list.constant";
 import SKILL from "./skill.constant";
 
 const STAT_LIST: TStatItem[] = [
@@ -8,17 +9,17 @@ const STAT_LIST: TStatItem[] = [
     text: "Years of Experience",
   },
   {
-    num: 10,
-    text: "Projects completed",
+    num: 11,
+    text: "Work Projects Summary",
+  },
+  {
+    num: PROJECT_LIST.length,
+    text: "Personal Project Portfolio",
   },
   {
     num: SKILL.info.length,
-    text: "Technologies mastered",
+    text: "Technologies Mastered",
   },
-  // {
-  //   num: 500,
-  //   text: "Code commits",
-  // },
 ];
 
 export default STAT_LIST;
