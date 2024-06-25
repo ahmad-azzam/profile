@@ -2,10 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
-
 import "swiper/css";
 import { TProjectItem } from "@/lib/types";
 import { PROJECT_LIST } from "@/lib/constant";
@@ -18,10 +16,10 @@ import {
 } from "@/components/ui/tooltip";
 import type { Swiper as TSwiper } from "swiper/types";
 import Image from "next/image";
+import { ButtonSlide } from "@/components/section/work";
 
 const Work: React.FC = () => {
   const [project, setProject] = React.useState<TProjectItem>(PROJECT_LIST[0]);
-  const swiperAction = useSwiper();
 
   const handleSlideChange = (swiper: TSwiper) => {
     const currentIndex = swiper.activeIndex;
@@ -63,19 +61,21 @@ const Work: React.FC = () => {
               <div className="border border-white/20" />
 
               <div className="flex items-center gap-4">
-                {/* <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p className="">Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link> */}
-                <Link href={project.github}>
+                {project.live && (
+                  <Link href={project.live} target="_blank">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p className="">Live Project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
@@ -113,20 +113,7 @@ const Work: React.FC = () => {
                 </SwiperSlide>
               ))}
 
-              <div className="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-normal">
-                <button
-                  className="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-                  onClick={() => swiperAction.slidePrev()}
-                >
-                  <PiCaretLeftBold />
-                </button>
-                <button
-                  className="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-                  onClick={() => swiperAction.slideNext()}
-                >
-                  <PiCaretRightBold />
-                </button>
-              </div>
+              <ButtonSlide />
             </Swiper>
           </div>
         </div>

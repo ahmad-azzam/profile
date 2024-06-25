@@ -1,6 +1,11 @@
 "use client";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import React from "react";
 import { CiMenuFries } from "react-icons/ci";
 import Logo from "../logo";
@@ -21,9 +26,9 @@ const NavbarMobile: React.FC = () => {
 
         <nav className="flex flex-col justify-center items-center gap-8">
           {MENU_LIST.map((menu, index) => (
-            <div key={`${index}__navbar__mobile`}>
+            <SheetClose asChild key={`${index}__navbar__mobile`}>
               <MenuItem menu={menu} />
-            </div>
+            </SheetClose>
           ))}
         </nav>
       </SheetContent>

@@ -9,7 +9,7 @@ type MenuItemProps = {
   menu: TMenuItem;
 };
 
-const MenuItem: React.FC<MenuItemProps> = ({ className, menu }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ className, menu, ...props }) => {
   const pathname = usePathname();
 
   return (
@@ -20,6 +20,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ className, menu }) => {
         pathname === menu.path && "text-accent border-b-2 border-accent",
         className
       )}
+      {...props}
     >
       {menu.name}
     </Link>
